@@ -1,0 +1,33 @@
+
+body {
+  .open {
+    &.navbar-overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+    &.navbar-menu {
+      translate: 0 0;
+      visibility: visible;
+    }
+  }
+  header {
+    button {
+      background: transparent;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      padding: 0;
+    }
+  
+    .navbar-menu {
+      translate: -100% 0;
+      transition: translate 0.3s;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar-menu {
+    translate: 0 0;
+  }
+}

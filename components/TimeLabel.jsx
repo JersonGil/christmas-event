@@ -4,14 +4,14 @@ import PropTypes from "prop-types";
 const TimeLabel = ({ timeLabel, timeType }) => {
   return (
     <div className="flex flex-col items-center flex-wrap">
-      <h2 className="text-6xl text-white">{timeLabel}</h2>
-      <label className="text-1xl text-white">{timeType}</label>
+      <h2 className="text-3xl sm:text-6xl text-white">{timeLabel}</h2>
+      <label className="text-sm text-white">{timeType}</label>
     </div>
   );
 };
 
 TimeLabel.propTypes = {
-  timeLabel: PropTypes.string.isRequired,
+  timeLabel: PropTypes.number.isRequired,
   timeType: PropTypes.string.isRequired,
 };
 

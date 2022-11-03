@@ -31,10 +31,10 @@ const Home = ({ ...props }) => {
     const seconds = Math.floor(
       (DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND
     );
-    setDays(days);
-    setHours(hours);
-    setMinutes(minutes);
-    setSeconds(seconds);
+    setDays(days > 9 ? days : `0${days}`);
+    setHours(hours > 9 ? hours : `0${hours}`);
+    setMinutes(minutes > 9 ? minutes : `0${minutes}`);
+    setSeconds(seconds > 9 ? seconds : `0${seconds}`);
   };
 
   useEffect(() => {
@@ -49,15 +49,17 @@ const Home = ({ ...props }) => {
   return (
     <section className="container-section">
       <div className="flex justify-center items-center h-screen flex-col">
-        <h1 className="font-bold text-7xl text-white">La Navidad Comienza:</h1>
+        <h1 className="font-bold text-center text-4xl sm:text-7xl text-white">
+          Christmas begins in:
+        </h1>
         <br />
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap gap-3 sm:gap-8">
           <TimeLabel timeLabel={days} timeType="DIAS" />
-          <span className="text-6xl text-white">:</span>
+          <span className="text-3xl sm:text-6xl text-white">:</span>
           <TimeLabel timeLabel={hours} timeType="HORAS" />
-          <span className="text-6xl text-white">:</span>
+          <span className="text-3xl sm:text-6xl text-white">:</span>
           <TimeLabel timeLabel={minutes} timeType="MINUTOS" />
-          <span className="text-6xl text-white">:</span>
+          <span className="text-3xl sm:text-6xl text-white">:</span>
           <TimeLabel timeLabel={seconds} timeType="SEGUNDOS" />
         </div>
       </div>
