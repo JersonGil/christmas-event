@@ -28,13 +28,13 @@ const Header = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <button className="text-white text-lg bg-transparent py-0 px-2 ">
-            Servicios
+            Services
           </button>
           <button className="text-white text-lg bg-transparent py-0 px-2">
-            Contacto
+            Contact
           </button>
           <button className="text-white text-lg bg-transparent py-0 px-2">
-            Clientes
+            Clients
           </button>
         </nav>
       </nav>

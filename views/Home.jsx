@@ -8,7 +8,7 @@ const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
 const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24;
 
 // ** COMPOENTNS
-import { TimeLabel } from "../components";
+import { TimeLabel, SantaClaus } from "../components";
 
 const Home = ({ ...props }) => {
   // The state for our timer
@@ -48,21 +48,24 @@ const Home = ({ ...props }) => {
 
   return (
     <section className="container-section">
-      <div className="flex justify-center items-center h-screen flex-col">
-        <h1 className="font-bold text-center text-4xl sm:text-7xl text-white">
-          Christmas begins in:
-        </h1>
-        <br />
-        <div className="flex flex-wrap gap-3 sm:gap-8">
-          <TimeLabel timeLabel={days} timeType="DIAS" />
-          <span className="text-3xl sm:text-6xl text-white">:</span>
-          <TimeLabel timeLabel={hours} timeType="HORAS" />
-          <span className="text-3xl sm:text-6xl text-white">:</span>
-          <TimeLabel timeLabel={minutes} timeType="MINUTOS" />
-          <span className="text-3xl sm:text-6xl text-white">:</span>
-          <TimeLabel timeLabel={seconds} timeType="SEGUNDOS" />
+      <div className="flex justify-center items-start h-screen flex-col mx-20">
+        <div className="flex items-center flex-col">
+          <h1 className="font-bold text-center text-4xl sm:text-7xl text-white">
+            Christmas begins in:
+          </h1>
+          <br />
+          <div className="flex flex-wrap gap-0 sm:gap-8">
+            <TimeLabel timeLabel={days} timeType="DAYS" />
+            <span className="text-3xl sm:text-6xl text-white">:</span>
+            <TimeLabel timeLabel={hours} timeType="HOURS" />
+            <span className="text-3xl sm:text-6xl text-white">:</span>
+            <TimeLabel timeLabel={minutes} timeType="MINUTES" />
+            <span className="text-3xl sm:text-6xl text-white">:</span>
+            <TimeLabel timeLabel={seconds} timeType="SECONDS" />
+          </div>
         </div>
       </div>
+      <SantaClaus />
     </section>
   );
 };
