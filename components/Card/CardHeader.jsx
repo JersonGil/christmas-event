@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const CardHeader = ({ children }) => {
   return (
-    <div className="flex p-6 h-44 max-h-44 max-w-44 flex-col items-start justify-center">
+    <div className="flex p-6 h-60 max-h-60 max-w-44 flex-col items-start justify-center">
       {children}
     </div>
   );

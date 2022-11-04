@@ -14,7 +14,7 @@ const Service = () => {
 
   return (
     <Layout>
-      <div className="flex flex-col items-start w-full px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24 h-full">
+      <div className="flex flex-col items-start w-full px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24 h-full bg-white">
         <h1 className="text-5xl text-left text-black my-6">
           Services provide for
           <br />
@@ -27,8 +27,8 @@ const Service = () => {
                 <Image
                   src={service.img}
                   alt={service.title}
-                  width={200}
-                  height={200}
+                  width={100}
+                  height={100}
                   priority
                   style={{
                     flexShrink: 0,

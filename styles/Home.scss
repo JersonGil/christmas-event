@@ -5,31 +5,33 @@
   100% { background-position: 0 35vmin, 0 70vmin, 0 50vmin, 0 60vmin; }
 }
 
-.container-section {
+body {
   background-image: url('../public/assets/home.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 
-  &::after,
-  &::before {
-    content: "";
-    position: fixed;
-    top: -3000%;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    overflow: hidden;
-    background-image:
-      radial-gradient(circle at 50% 50%, white 2.5%, transparent 0),
-      radial-gradient(circle at 30% 90%, white 1.5%, transparent 0),
-      radial-gradient(circle at 70% 10%, white 1%, transparent 0),
-      radial-gradient(circle at 20% 80%, white 1%, transparent 0),
-      radial-gradient(circle at 10% 40%, white 1%, transparent 0);
-    background-size: 35vmin 35vmin, 60vmin 70vmin, 60vmin 50vmin, 65vmin 60vmin;
-    background-position: 0 0, 0 0, 0 0, 0 0;
-    animation: snow infinite 5s linear;
+  .container-section {
+    &::after,
+    &::before {
+      content: "";
+      position: fixed;
+      top: -3000%;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      overflow: hidden;
+      background-image:
+        radial-gradient(circle at 50% 50%, white 2.5%, transparent 0),
+        radial-gradient(circle at 30% 90%, white 1.5%, transparent 0),
+        radial-gradient(circle at 70% 10%, white 1%, transparent 0),
+        radial-gradient(circle at 20% 80%, white 1%, transparent 0),
+        radial-gradient(circle at 10% 40%, white 1%, transparent 0);
+      background-size: 35vmin 35vmin, 60vmin 70vmin, 60vmin 50vmin, 65vmin 60vmin;
+      background-position: 0 0, 0 0, 0 0, 0 0;
+      animation: snow infinite 5s linear;
+    }
   }
 
   .canvas {
