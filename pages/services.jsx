@@ -15,7 +15,7 @@ const Service = () => {
   return (
     <Layout>
       <div className="flex flex-col items-start w-full px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24 h-full">
-        <h1 className="text-5xl text-left">
+        <h1 className="text-5xl text-left text-black my-6">
           Services provide for
           <br />
           <span className="text-5xl font-bold">Christmas Shop</span>
@@ -27,9 +27,14 @@ const Service = () => {
                 <Image
                   src={service.img}
                   alt={service.title}
-                  width={250}
-                  height={250}
+                  width={200}
+                  height={200}
                   priority
+                  style={{
+                    flexShrink: 0,
+                    minWidth: "100%",
+                    minHeight: "100%",
+                  }}
                 />
               </Card.Header>
               <Card.Body>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Card = ({ children }) => {
   return (
-    <div className="shadow-xl h-auto max-h-[400px] w-auto max-w-md border-slate-200 rounded-2xl">
+    <div className="shadow-xl h-auto max-h-[400px] w-auto max-w-md bg-white bg-opacity-25 border-slate-200 rounded-2xl">
       {children}
     </div>
   );
