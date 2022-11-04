@@ -1,12 +1,15 @@
 import Head from "next/head";
+
+// ** COMPONENTS
+import { Layout } from "../components";
+
+// ** VIEWS
 import { Home } from "../views";
-import { Header } from "../components";
 
 export default function App() {
   return (
-    <main className="h-screen">
-      <Header />
+    <Layout>
       <Home />
-    </main>
+    </Layout>
   );
 }

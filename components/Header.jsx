@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import { MdMenu } from "react-icons/md";
 import { TbChristmasTree } from "react-icons/tb";
@@ -7,7 +8,7 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="fixed z-10 top-0 left-0 flex items-center justify-center w-full h-16 sm:py-0 sm:pr-0 sm:pl-4 sm:justify-between">
+      <nav className="fixed z-10 top-0 left-0 flex items-center justify-center w-full h-16 sm:py-0 sm:pr-0 sm:pl-4 sm:justify-between bg-opacity-20 bg-white">
         <div
           className="fixed z-10 top-0 left-0 w-full h-full invisible opacity-0 transition delay-75 bg-black/[.05] navbar-overlay sm:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -18,18 +19,22 @@ const Header = () => {
         >
           <MdMenu />
         </button>
-        <h1 className="m-0 flex gap-3 text-2xl font-bold text-white sm:translate-x-[100%]">
-          <TbChristmasTree /> Christmas Shop
-        </h1>
+        <Link href="/">
+          <h1 className="m-0 flex gap-3 text-2xl font-bold text-white sm:translate-x-[100%]">
+            <TbChristmasTree /> Christmas Shop
+          </h1>
+        </Link>
         <nav
-          className={`fixed z-10 top-0 left-0 navbar-menu w-52 h-full p-5 flex flex-col items-center bg-black invisible sm:static sm:w-auto sm:bg-transparent sm:flex-row sm:visible ${
+          className={`fixed z-10 top-0 left-0 navbar-menu w-52 h-full gap-4 p-5 flex flex-col items-center bg-black invisible sm:static sm:w-auto sm:bg-transparent sm:flex-row sm:visible ${
             isOpen ? "open" : ""
           }`}
-          onClick={() => setIsOpen(!isOpen)}
         >
-          <button className="text-white text-lg bg-transparent py-0 px-2 ">
+          <Link
+            className="text-white text-lg bg-transparent py-0 px-2"
+            href="/services"
+          >
             Services
-          </button>
+          </Link>
           <button className="text-white text-lg bg-transparent py-0 px-2">
             Contact
           </button>
