@@ -1,12 +1,15 @@
+import { useId, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
 import { MdMenu } from "react-icons/md";
 import { TbChristmasTree } from "react-icons/tb";
+
+import { LINKS } from "../public/data";
 
 const Header = () => {
   const route = useRouter();
   const [isOpen, setIsOpen] = useState(false);
+  const linkId = useId();
 
   return (
     <header>
@@ -35,18 +38,15 @@ const Header = () => {
             isOpen ? "open" : ""
           }`}
         >
-          <Link
-            className="text-white text-lg bg-transparent py-0 px-2"
-            href="/services"
-          >
-            Services
-          </Link>
-          <button className="text-white text-lg bg-transparent py-0 px-2">
-            Contact
-          </button>
-          <button className="text-white text-lg bg-transparent py-0 px-2">
-            Clients
-          </button>
+          {LINKS.map((link, index) => (
+            <Link
+              key={`${linkId}-${index}`}
+              className="text-white text-lg bg-transparent py-0 px-2"
+              href={link.url}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
       </nav>
     </header>

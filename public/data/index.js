@@ -16,4 +16,19 @@ const services = [
   },
 ];
 
-export { services };
+const LINKS = [
+  {
+    label: "Services",
+    url: "/services",
+  },
+  {
+    label: "Contact",
+    url: "/contact",
+  },
+  {
+    label: "Clients",
+    url: "/clients",
+  },
+];
+
+export { services, LINKS };

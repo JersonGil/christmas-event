@@ -7,7 +7,7 @@ import { Layout, Card } from "../components";
 import { MdArrowRightAlt } from "react-icons/md";
 
 // ** MOCK DATA
-import { services } from "../public/data/servicesData";
+import { services } from "../public/data";
 
 const Service = () => {
   const cardId = useId();
@@ -20,7 +20,7 @@ const Service = () => {
           <br />
           <span className="text-5xl font-bold">Christmas Shop</span>
         </h1>
-        <section className="mt-8 flex flex-col sm:flex-row gap-6">
+        <section className="my-8 flex flex-col sm:flex-row gap-6">
           {services.map((service, index) => (
             <Card key={`${cardId}-${index}`}>
               <Card.Header>
@@ -29,7 +29,6 @@ const Service = () => {
                   alt={service.title}
                   width={100}
                   height={100}
-                  priority
                   style={{
                     flexShrink: 0,
                     minWidth: "100%",

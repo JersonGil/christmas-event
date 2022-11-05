@@ -13,6 +13,10 @@ class CustomDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

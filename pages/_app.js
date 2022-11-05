@@ -11,14 +11,16 @@ function MyApp({ Component, pageProps, router }) {
   const url = `http://localhost:3000${router.route}`;
 
   return (
-    <AnimatePresence
-      exitBeforeEnter
-      initial={false}
-      onExitComplete={() => window.scrollTo(0, 0)}
-    >
+    <>
       <Header />
-      <Component {...pageProps} canonical={url} key={url} />
-    </AnimatePresence>
+      <AnimatePresence
+        exitBeforeEnter
+        initial={false}
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
+        <Component {...pageProps} canonical={url} key={url} />
+      </AnimatePresence>
+    </>
   );
 }
 
