@@ -9,7 +9,7 @@ const Input = ({ label, ...props }) => {
         {label}
       </label>
       <input
-        className="border-slate-300 h-12 w-auto border-2 rounded-lg p-4 text-xs text-slate-500 outline-slate-300"
+        className="border-slate-200 h-12 w-auto border-2 rounded-lg p-4 text-xs text-slate-500 outline-slate-200"
         {...props}
       />
     </div>

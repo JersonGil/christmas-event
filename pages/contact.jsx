@@ -6,10 +6,10 @@ import { Input, Map } from "../components";
 
 const contacts = (props) => {
   return (
-    <section className="flex flex-col gap-14 sm:flex-row items-start w-full h-screen px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24 bg-white">
-      <div className="flex flex-col">
+    <section className="flex flex-col gap-0 sm:flex-row items-start w-full h-screen bg-white">
+      <div className="flex flex-col bg-[url('/assets/cover.jpg')] w-full h-screen bg-cover bg-center bg-no-repeat px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24">
         <h1 className="text-5xl font-bold mt-8">Contact us</h1>
-        <h3 className="mt-2 text-lg">
+        <h3 className="mt-2 text-l">
           Our friendly team will contact you for shipments
         </h3>
         <form
@@ -24,7 +24,7 @@ const contacts = (props) => {
           <div className="flex flex-col mt-4">
             <label className="text-base">Messages</label>
             <textarea
-              className="border-slate-300 w-auto border-2 rounded-lg p-4 text-xs text-slate-500"
+              className="border-slate-200 w-auto border-2 rounded-lg p-4 text-xs text-slate-500 outline-slate-200"
               rows="8"
             />
           </div>
