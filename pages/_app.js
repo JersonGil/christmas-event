@@ -6,6 +6,7 @@ import { Header } from "../components";
 import "../styles/globals.scss";
 import "../styles/Home.scss";
 import "../styles/header.scss";
+import "../styles/service.scss";
 
 function MyApp({ Component, pageProps, router }) {
   const url = `http://localhost:3000${router.route}`;

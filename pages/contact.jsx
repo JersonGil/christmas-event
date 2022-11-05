@@ -7,7 +7,12 @@ import { Input, Map } from "../components";
 const contacts = (props) => {
   return (
     <section className="flex flex-col gap-0 sm:flex-row items-start w-full h-screen bg-white">
-      <div className="flex flex-col bg-[url('/assets/cover.jpg')] w-full h-screen bg-cover bg-center bg-no-repeat px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24">
+      <div
+        className="
+            flex flex-col bg-[url('/assets/cover.jpg')] 
+            w-full h-screen bg-cover bg-center bg-no-repeat
+            px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24"
+      >
         <h1 className="text-5xl font-bold mt-8">Contact us</h1>
         <h3 className="mt-2 text-l">
           Our friendly team will contact you for shipments

@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
       exit="exit"
       variants={variants}
       transition={{ type: "linear" }}
-      className="h-screen"
+      className="h-screen relative"
     >
       {children}
     </motion.main>

@@ -14,30 +14,26 @@ const Service = () => {
 
   return (
     <Layout>
-      <div className="flex flex-col items-start w-full px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24 h-full bg-white">
+      <div className="flex flex-col items-start w-full px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24 h-full container-service">
         <h1 className="text-5xl text-left text-black my-6">
           Services provide for
           <br />
-          <span className="text-5xl font-bold">Christmas Shop</span>
+          <span className="text-6xl font-bold">Christmas Shop</span>
         </h1>
-        <section className="my-8 flex flex-col sm:flex-row gap-6">
+        <section className="my-5 flex flex-col sm:flex-row gap-6">
           {services.map((service, index) => (
             <Card key={`${cardId}-${index}`}>
               <Card.Header>
                 <Image
                   src={service.img}
                   alt={service.title}
-                  width={100}
-                  height={100}
-                  style={{
-                    flexShrink: 0,
-                    minWidth: "100%",
-                    minHeight: "100%",
-                  }}
+                  width={400}
+                  height={400}
+                  className="min-w-full min-h-full hover:brightness-50 block"
                 />
               </Card.Header>
               <Card.Body>
-                <h1 className="text-3xl font-bold my-4">
+                <h1 className="text-3xl font-bold my-2">
                   {capitalize(service.title)}
                 </h1>
                 <span className="text-justify text-base">{service.body}</span>

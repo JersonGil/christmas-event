@@ -28,20 +28,18 @@ const Header = () => {
         >
           <MdMenu />
         </button>
-        <Link href="/">
-          <h1 className="m-0 flex gap-3 text-2xl font-bold text-white sm:translate-x-[100%]">
-            <TbChristmasTree /> Christmas Shop
-          </h1>
-        </Link>
+        <h1 className="m-0 flex gap-3 text-3xl font-bold text-white sm:translate-x-[100%]">
+          <TbChristmasTree /> Christmas Shop
+        </h1>
         <nav
-          className={`fixed z-10 top-0 left-0 navbar-menu w-52 h-full gap-4 p-5 flex flex-col items-center bg-black invisible sm:static sm:w-auto sm:bg-transparent sm:flex-row sm:visible ${
+          className={`fixed z-10 top-0 left-0 navbar-menu w-52 h-full gap-4 p-1 flex flex-col items-center bg-black invisible sm:static sm:w-auto sm:bg-transparent sm:flex-row sm:visible ${
             isOpen ? "open" : ""
           }`}
         >
           {LINKS.map((link, index) => (
             <Link
               key={`${linkId}-${index}`}
-              className="text-white text-lg bg-transparent py-0 px-2"
+              className="text-white text-lg hover:underline hover:underline-offset-1 bg-transparent py-0 px-2 font-bold"
               href={link.url}
             >
               {link.label}

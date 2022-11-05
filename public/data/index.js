@@ -12,11 +12,15 @@ const services = [
   {
     title: "food sale",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum id mauris eu placerat. Ut consectetur fermentum dignissim.",
-    img: "/assets/food.png",
+    img: "/assets/food.jpg",
   },
 ];
 
 const LINKS = [
+  {
+    label: "Home",
+    url: "/",
+  },
   {
     label: "Services",
     url: "/services",
