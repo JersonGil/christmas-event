@@ -50,7 +50,10 @@ const Home = ({ ...props }) => {
     <section className="container-section">
       <div className="flex justify-center items-start h-screen flex-col mx-20">
         <div className="flex items-center flex-col">
-          <h1 className="font-bold text-center text-4xl sm:text-7xl text-white">
+          <h1 className="font-bold text-center text-7xl sm:text-7xl text-white">
+            Welcome
+          </h1>
+          <h1 className="font-bold text-center text-5xl sm:text-7xl text-white">
             Christmas begins in:
           </h1>
           <br />
