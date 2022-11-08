@@ -12,6 +12,7 @@ const Header = () => {
   const linkId = useId();
 
   const togleMenu = () => {
+    console.log("aw");
     setIsOpen(!isOpen);
   };
 
@@ -23,7 +24,9 @@ const Header = () => {
         }`}
       >
         <div
-          className="fixed z-10 top-0 left-0 w-full h-full invisible opacity-0 transition delay-75 bg-black/[.05] navbar-overlay sm:hidden"
+          className={`fixed z-10 top-0 left-0 w-full h-full ${
+            isOpen ? "visible" : "invisible"
+          } opacity-0 transition delay-75 bg-black/[.05] navbar-overlay sm:hidden`}
           onClick={togleMenu}
         />
         <button
