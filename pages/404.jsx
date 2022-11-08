@@ -16,9 +16,11 @@ const NotFound = () => {
           px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-64 pt-24
         "
       >
-        <div className="w-[60%] flex flex-col items-center justify-center z-10">
-          <h1 className="text-white text-9xl font-bold">404 - Error</h1>
-          <div className="text-4xl flex flex-col mt-4 items-center text-white ml-6">
+        <div className="w-full sm:w-[60%] flex flex-col items-center justify-center z-[1]">
+          <h1 className="text-white text-6xl sm:text-9xl font-bold">
+            404 - Error
+          </h1>
+          <div className="text-2xl sm:text-4xl flex flex-col mt-4 items-center text-white ml-6">
             <span>Santa Saying sorry</span>
             <h3 className="mt-2">Christmas hasnt come yet</h3>
           </div>

@@ -11,6 +11,10 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const linkId = useId();
 
+  const togleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header>
       <nav
@@ -20,11 +24,11 @@ const Header = () => {
       >
         <div
           className="fixed z-10 top-0 left-0 w-full h-full invisible opacity-0 transition delay-75 bg-black/[.05] navbar-overlay sm:hidden"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={togleMenu}
         />
         <button
           className="absolute t-0 left-0 grid place-items-center w-16 h-16 p-0 sm:hidden text-white text-2xl"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={togleMenu}
         >
           <MdMenu />
         </button>
@@ -32,14 +36,16 @@ const Header = () => {
           <TbChristmasTree /> Christmas Shop
         </h1>
         <nav
-          className={`fixed z-10 top-0 left-0 navbar-menu w-52 h-full gap-4 p-1 flex flex-col items-center bg-black invisible sm:static sm:w-auto sm:bg-transparent sm:flex-row sm:visible ${
-            isOpen ? "open" : ""
-          }`}
+          className={`fixed z-10 top-0 left-0 navbar-menu w-52 h-full gap-4 p-1 flex flex-col 
+            items-center bg-black invisible sm:static 
+            sm:w-auto sm:bg-transparent sm:flex-row sm:visible ${
+              isOpen ? "open" : ""
+            }`}
         >
           {LINKS.map((link, index) => (
             <Link
               key={`${linkId}-${index}`}
-              className="text-white text-lg hover:underline hover:underline-offset-1 bg-transparent py-0 px-2 font-bold"
+              className="text-white text-lg hover:underline hover:underline-offset-1 bg-transparent py-0 px-2 font-bold mt-5 sm:mt-0"
               href={link.url}
             >
               {link.label}

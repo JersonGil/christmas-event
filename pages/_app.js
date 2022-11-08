@@ -10,7 +10,6 @@ import "../styles/service.scss";
 
 function MyApp({ Component, pageProps, router }) {
   const url = `http://localhost:3000${router.route}`;
-
   return (
     <>
       <Header />
